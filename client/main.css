@@ -1,5 +1,4 @@
 body {
-  background-color: antiquewhite;
   padding: 0 200px;
 }
 
@@ -50,9 +49,19 @@ body {
   object-fit: none;
   object-position: 35% 50%;
 }
+
+.hangmanImage2 {
+  height: auto;
+  position: fixed;
+  opacity: 0.1;
+  width: 790px;
+  object-fit: none;
+  object-position: 35% 50%;
+}
 .letterButton {
   width: 90px;
   height: 90px;
+  border-radius: 5px;
   margin: 0 auto;
   padding: 0;
   display: inline-block;

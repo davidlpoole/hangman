@@ -12,12 +12,14 @@ interface Props {
 
 function Hangman({ tries }: Props) {
   const imgUrl = [img0, img1, img2, img3, img4, img5, img6]
-  const index = Math.min(tries, imgUrl.length - 1)
 
   return (
     <>
-      <div className="numberOfGuesses">Number of wrong guesses: {tries}</div>
+      <div className="numberOfGuesses">
+        Incorrect guesses remaining: {6 - tries}
+      </div>
       <div>
+        <img className="hangmanImage2" src={img6} alt="" />
         <img className="hangmanImage" src={imgUrl[tries]} alt="" />
       </div>
     </>

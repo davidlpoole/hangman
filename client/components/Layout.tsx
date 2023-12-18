@@ -4,12 +4,11 @@ export default function Layout() {
   return (
     <>
       <header>
-        <h1>Hangman Game!</h1>
+        <h1>Hangman</h1>
       </header>
       <main>
         <Outlet />
       </main>
-      {/* <footer>Copyright &copy; 2038</footer> */}
     </>
   )
 }

@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 interface Props {
   guessed: string[]
   setGuessed: React.Dispatch<React.SetStateAction<string[]>>
@@ -35,16 +33,14 @@ function LettersUnused({ guessed, setGuessed }: Props) {
     'Z',
   ]
 
-  function handleClick(e: React.MouseEvent<HTMLElement>) {
-    const letterTyped = e.target.innerHTML
-    setGuessed([...guessed, letterTyped])
-  }
-
   return lettersArr.map((letter, index) => (
     <button
       className="letterButton"
       name={letter}
-      onClick={handleClick}
+      value={letter}
+      onClick={(e) => {
+        setGuessed([...guessed, e.target.value])
+      }}
       key={index}
       disabled={guessed.includes(letter)}
     >
